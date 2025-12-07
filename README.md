@@ -2,14 +2,11 @@
   <center>
 <h1 align="center">~ 💖 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓶𝔂 𝓟𝓻𝓸𝓯𝓲𝓵𝓮 💖~</h1>
 <div align="center">
-
-  <a href="https://egirl.ing/" >
+  </a>
   </a>
     <br>
-  <p>𝒯𝒽𝑒𝓇𝑒 𝒾𝓈 𝒶 𝓌𝒽𝑜𝓁𝑒 𝓃𝑒𝓌 𝓌𝑜𝓇𝓁𝒹</p>
-  <p>𝒯𝒽𝒶𝓉 𝓎𝑜𝓊 𝓃𝑒𝑒𝒹 𝓉𝑜 𝑒𝓍𝓅𝓁𝑜𝓇𝑒</p>
-  <p>𝐼𝓉'𝓈 𝓉𝒽𝑒 𝓈𝑜𝓊𝓃𝒹 𝑜𝒻 𝓉𝒽𝑒 𝓇𝒶𝒾𝓁</p>
-<p>𝒯𝒽𝒶𝓉 𝓎𝑜𝓊 𝓁𝑜𝓋𝑒 𝒶𝓃𝒹 𝒶𝒹𝑜𝓇𝑒</p>
+  <p>𝓤𝓷𝓲𝓿𝓮𝓻𝓼𝓲𝓽𝔂: ℱ𝑜𝓇𝑒𝒾𝑔𝓃 𝒯𝓇𝒶𝒹𝑒 𝒰𝓃𝒾𝓋𝑒𝓇𝓈𝒾𝓉𝓎 </p>
+  <p>𝓜𝓪𝓳𝓸𝓻: ℱ𝒾𝓃𝒶𝓃𝒸𝑒</p>
   
 </div>
     <div align="center">
@@ -22,6 +19,10 @@
   </div>
 <li>
  <b>Name:</b> Nguyen Thuy Cham</li>
+<li>
+<b>Age:</b> 20 
+<li>
+<b>Nationality:</b> Vietnam
 <li>
 <b>Loves:</b> Learning Korea, Chinese, Reading
 </li>
@@ -61,3 +62,7 @@ There are many more things, but this site doesn't have a Linux badge,
     </center>
 </body>
 
+# Contact me ᓚᘏᗢ
+* [Gmail](k62.2314330009@ftu.edu.vn)
+* Discord: Kir8726
+* [Facebook](https://www.facebook.com/thuycham.nguyen.106)
