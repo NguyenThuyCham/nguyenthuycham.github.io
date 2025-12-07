@@ -48,17 +48,13 @@
  <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/> <br><br>
 
   
-  </li>
 <br><br><br><br>
   </p>
-</li>
 <br>
-  </li>
-  
 <div>
 <div>
 
-  ~ 𝓔𝔁𝓹𝓮𝓻𝓲𝓮𝓷𝓬𝓮𝓼 ~</h2>
+  ~ 𝓔𝔁𝓹𝓮𝓻𝓲𝓮𝓷𝓬𝓮𝓼 ~
  <br>
   <p> 
                             
@@ -96,7 +92,6 @@
 <img src="https://i.gifer.com/ZHsJ.gif">
 </div>
 <hr>
-</div>
 
 <h1 align="center">~ Contact me ᓚᘏᗢ ~</h1>
 
@@ -104,4 +99,3 @@
   <a href="https://www.facebook.com/thuycham.nguyen.106/"><img src="https://img.shields.io/badge/FACEBOOK-DAC6C2?style=for-the-badge"/> </a> <a href="https://instagram.com/elliottophellia"><img src="https://img.shields.io/badge/INSTAGRAM-DAC6C2?style=for-the-badge"/></a> <a href="https://www.linkedin.com/in/nguyen-thuy-cham-8707a82a6/"><img src="https://img.shields.io/badge/LINKEDIN-DAC6C2?style=for-the-badge"/></a> <a href="#"><img src="https://img.shields.io/badge/%23-DAC6C2?style=for-the-badge"/></a>
 </p>
 <img src="https://i.ibb.co/5r2WJZy/Elaina-With-Effective-Python-1-2.webp" width="100%" align="center" />
-</div>
