@@ -60,7 +60,7 @@ There are many more things, but this site doesn't have a Linux badge,
 </div>
 
 
-# Contact me ᓚᘏᗢ
+<h1 align="center">~ Contact me ᓚᘏᗢ ~</h1>
 
 * [Gmail](k62.2314330009@ftu.edu.vn)
 * Discord: Kir8726
