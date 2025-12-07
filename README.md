@@ -34,7 +34,7 @@
 <b>Hobbys:</b> Writer, Draw
 </li>
 <br><br><br><br>
-</div>
+  
 <div>
 <h2 align="center">            ~ 📇 𝓚𝓷𝓸𝔀𝓵𝓮𝓭𝓰𝓮 📇 ~</h2>
  <br>
@@ -42,7 +42,6 @@
   <div align="center">
 <img src="https://i.pinimg.com/originals/8d/4b/77/8d4b77c44b7a68c0fd609411e2c0ec3c.gif" align="right">
   </div>
-</div>
 <div>
   <br>
 <p align="center"><img src="https://img.shields.io/badge/adobe%20photoshop%20-%2331A8FF.svg?&style=for-the-badge&logo=adobe%20photoshop&logoColor=white"/> <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/><br>
@@ -59,11 +58,10 @@ There are many more things, but this site doesn't have a Linux badge,
 </div>
 <hr>
 </div>
-</div>
-    </center>
-</body>
+
 
 # Contact me ᓚᘏᗢ
+
 * [Gmail](k62.2314330009@ftu.edu.vn)
 * Discord: Kir8726
 * [Facebook](https://www.facebook.com/thuycham.nguyen.106)
