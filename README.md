@@ -1,10 +1,8 @@
-# nguyenthuycham.github.io
 <body>
   <center>
 <h1 align="center">~ 💖 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓶𝔂 𝓟𝓻𝓸𝓯𝓲𝓵𝓮 💖 ~</h1>
 <br>
 <div align="center">
-<!-- <a href="https://discord.com/users/202740603790819328" > -->
   <a href="https://egirl.ing/" >
   
     <br>
@@ -25,13 +23,10 @@
 <li>
  <b>Name:Nguyen Thuy Cham
 <li>
-<b>Loves:</b> learning Korea and Japanese, code, anime, osu, reading book
+<b>Loves:</b> learning Korea,Japanese, code,reading book
 </li>
 <li>
 <b>Gender:</b> she/her/Female
-</li>
-<li>
-<b>LastFM:</b> https://scrobble.egirl.ing
 </li>
 <li>
 <b>Hobbys:</b> Dev Ops, Writer
@@ -42,7 +37,6 @@
 <h2 align="center">            ~ 📇 𝓚𝓷𝓸𝔀𝓵𝓮𝓭𝓰𝓮 📇 ~</h2>
  <br>
 <p>
-  <div align="center">
 <img src="https://i.pinimg.com/originals/8d/4b/77/8d4b77c44b7a68c0fd609411e2c0ec3c.gif" align="right">
   </div>
 </div>
@@ -63,5 +57,4 @@ There are many more things, but this site doesn't have a Linux badge,
 <hr>
 </div>
 </div>
-    </center>
-</body>
+  
