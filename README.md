@@ -59,9 +59,10 @@ There are many more things, but this site doesn't have a Linux badge,
 <hr>
 </div>
 
-
 <h1 align="center">~ Contact me ᓚᘏᗢ ~</h1>
 
-* [Gmail](k62.2314330009@ftu.edu.vn)
-* Discord: Kir8726
-* [Facebook](https://www.facebook.com/thuycham.nguyen.106)
+<p align='center'>
+  <a href="https://www.facebook.com/thuycham.nguyen.106/"><img src="https://img.shields.io/badge/FACEBOOK-DAC6C2?style=for-the-badge"/> </a> <a href="https://instagram.com/elliottophellia"><img src="https://img.shields.io/badge/INSTAGRAM-DAC6C2?style=for-the-badge"/></a> <a href="https://linkedin.com/in/elliottophellia"><img src="https://img.shields.io/badge/LINKEDIN-DAC6C2?style=for-the-badge"/></a> <a href="#"><img src="https://img.shields.io/badge/%23-DAC6C2?style=for-the-badge"/></a>
+</p>
+<img src="https://i.ibb.co/5r2WJZy/Elaina-With-Effective-Python-1-2.webp" width="100%" align="center" />
+</div>
