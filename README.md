@@ -62,7 +62,7 @@ There are many more things, but this site doesn't have a Linux badge,
 <h1 align="center">~ Contact me ᓚᘏᗢ ~</h1>
 
 <p align='center'>
-  <a href="https://www.facebook.com/thuycham.nguyen.106/"><img src="https://img.shields.io/badge/FACEBOOK-DAC6C2?style=for-the-badge"/> </a> <a href="https://instagram.com/elliottophellia"><img src="https://img.shields.io/badge/INSTAGRAM-DAC6C2?style=for-the-badge"/></a> <a href="https://linkedin.com/in/elliottophellia"><img src="https://img.shields.io/badge/LINKEDIN-DAC6C2?style=for-the-badge"/></a> <a href="#"><img src="https://img.shields.io/badge/%23-DAC6C2?style=for-the-badge"/></a>
+  <a href="https://www.facebook.com/thuycham.nguyen.106/"><img src="https://img.shields.io/badge/FACEBOOK-DAC6C2?style=for-the-badge"/> </a> <a href="https://instagram.com/elliottophellia"><img src="https://img.shields.io/badge/INSTAGRAM-DAC6C2?style=for-the-badge"/></a> <a href="https://www.linkedin.com/in/nguyen-thuy-cham-8707a82a6/"><img src="https://img.shields.io/badge/LINKEDIN-DAC6C2?style=for-the-badge"/></a> <a href="#"><img src="https://img.shields.io/badge/%23-DAC6C2?style=for-the-badge"/></a>
 </p>
 <img src="https://i.ibb.co/5r2WJZy/Elaina-With-Effective-Python-1-2.webp" width="100%" align="center" />
 </div>
