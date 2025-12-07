@@ -2,8 +2,6 @@
   <center>
 <h1 align="center">~ 💖 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓶𝔂 𝓟𝓻𝓸𝓯𝓲𝓵𝓮 💖~</h1>
 <div align="center">
-  </a>
-  </a>
     <br>
   <p>𝓤𝓷𝓲𝓿𝓮𝓻𝓼𝓲𝓽𝔂: ℱ𝑜𝓇𝑒𝒾𝑔𝓃 𝒯𝓇𝒶𝒹𝑒 𝒰𝓃𝒾𝓋𝑒𝓇𝓈𝒾𝓉𝓎 </p>
   <p>𝓜𝓪𝓳𝓸𝓻: ℱ𝒾𝓃𝒶𝓃𝒸𝑒</p>
@@ -17,6 +15,9 @@
   <div align="center">
 <img src="https://64.media.tumblr.com/e1f1c97123ae217eb731500e502e0083/tumblr_n9dxcikmIU1qc9zfzo7_r1_250.gif" align="right">
   </div>
+<br>
+  
+<p> 
 <li>
  <b>Name:</b> Nguyen Thuy Cham</li>
 <li>
@@ -30,7 +31,7 @@
 <b>Gender:</b> she/her/Female
 </li>
 <li>
-<b>Hobbys:</b> Writer
+<b>Hobbys:</b> Writer, Draw
 </li>
 <br><br><br><br>
 </div>
@@ -54,7 +55,7 @@ There are many more things, but this site doesn't have a Linux badge,
 <div>
 <h2 align="center">💖 ~ 𝓣𝓱𝓪𝓷𝓴𝓼 𝓯𝓸𝓻 𝓻𝓮𝓪𝓭𝓲𝓷𝓰! ~ 💖</h2>
 <div align="center">
-<img src="https://i.imgur.com/tzYKRfd.gif">
+<img src="https://i.gifer.com/ZHsJ.gif">
 </div>
 <hr>
 </div>
