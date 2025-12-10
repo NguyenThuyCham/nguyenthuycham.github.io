@@ -3,181 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Thuy Cham | Finance Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Thuy Cham | Anime & Finance Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            /* Bảng màu Blue Ocean */
-            --primary-color: #004e92;
-            --secondary-color: #000428;
-            --accent-color: #4facfe;
-            --text-color: #333;
-            --bg-light: #f9f9f9;
+            /* Bảng màu Blue Ocean pha chút Anime nhẹ nhàng */
+            --primary: #0077b6;      /* Xanh biển đậm */
+            --secondary: #caf0f8;    /* Xanh băng tuyết */
+            --accent: #ffb7b2;       /* Hồng phấn nhẹ (tạo điểm nhấn cute) */
+            --text: #2b2d42;
+            --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; line-height: 1.6; color: var(--text-color); }
         
-        /* Typography */
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--secondary-color); }
-        
-        /* Header / Hero Section */
+        body { 
+            font-family: 'Nunito', sans-serif; 
+            color: var(--text); 
+            background-color: #f0f8ff; /* Nền xanh nhạt như bầu trời */
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Họa tiết mờ */
+            line-height: 1.6;
+        }
+
+        /* Typography - Chữ điệu đà giống phong cách cũ của bạn */
+        h1, h2, h3 { 
+            font-family: 'Dancing Script', cursive; 
+            color: var(--primary);
+        }
+
+        /* HEADER / HERO SECTION */
         header {
-            height: 100vh;
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            color: white;
+            min-height: 80vh;
+            background: linear-gradient(180deg, var(--secondary) 0%, rgba(255,255,255,0) 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
+        }
+
+        .typing-effect {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #fff;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #555;
+            background: rgba(255,255,255,0.8);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,119,182,0.2);
+        }
+
+        /* CHUNG CHO CÁC SECTION */
+        section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 5px solid var(--primary);
+            overflow: hidden; /* Để bo tròn ảnh */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
             position: relative;
         }
         
-        header h1 { font-size: 3.5rem; margin-bottom: 1rem; animation: fadeIn 2s ease; }
-        header p { font-size: 1.2rem; font-weight: 300; letter-spacing: 2px; opacity: 0.9; }
-        .scroll-down { position: absolute; bottom: 30px; animation: bounce 2s infinite; color: white; }
-
-        /* Sections General */
-        section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; position: relative; }
-        .section-title::after {
-            content: ''; display: block; width: 60px; height: 3px; background: var(--accent-color);
-            margin: 15px auto 0;
+        /* Trang trí cánh hoa anh đào hoặc dấu ngã bên cạnh tiêu đề */
+        .section-title::before, .section-title::after {
+            content: '✿';
+            color: var(--accent);
+            font-size: 2rem;
+            margin: 0 15px;
+            vertical-align: middle;
         }
 
-        /* About Section */
-        .about-container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .about-img { flex: 1; text-align: center; }
-        .about-img img { 
-            width: 280px; height: 280px; object-fit: cover; border-radius: 50%; 
-            border: 5px solid var(--accent-color); box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        /* GRID LAYOUT (Chia cột) */
+        .grid-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
         }
-        .about-text { flex: 2; }
         
-        /* Skills badges */
-        .skill-tag {
-            display: inline-block; background: var(--bg-light); color: var(--primary-color);
-            padding: 8px 15px; border-radius: 20px; margin: 5px; border: 1px solid #ddd; font-size: 0.9rem;
+        /* Đảo ngược thứ tự ảnh/chữ ở các section khác nhau cho đỡ nhàm chán */
+        .grid-reverse {
+            flex-direction: row-reverse;
         }
 
-        /* Timeline (Experience/Education) */
-        .timeline-item {
-            background: white; border-left: 4px solid var(--primary-color);
-            padding: 20px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        .timeline-item:hover { transform: translateY(-5px); }
-        .timeline-date { font-weight: bold; color: var(--accent-color); font-size: 0.9rem; }
+        .col-img { flex: 1; text-align: center; }
+        .col-text { flex: 1.5; }
 
-        /* Contact */
-        .contact-links { text-align: center; margin-top: 30px; }
-        .contact-btn {
-            display: inline-block; padding: 12px 30px; margin: 10px;
-            background: var(--primary-color); color: white; text-decoration: none;
-            border-radius: 5px; transition: 0.3s;
+        .anime-gif {
+            max-width: 100%;
+            border-radius: 15px;
+            border: 4px dashed var(--primary); /* Viền nét đứt dễ thương */
+            transition: transform 0.3s;
         }
-        .contact-btn:hover { background: var(--accent-color); }
+        .anime-gif:hover { transform: scale(1.05) rotate(2deg); }
 
-        /* Animations */
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+        /* LIST STYLE */
+        ul.custom-list { list-style: none; }
+        ul.custom-list li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+        ul.custom-list li::before {
+            content: '🦊'; /* Icon con cáo đầu dòng */
+            position: absolute; left: 0; top: 2px;
+        }
+
+        /* SKILL BADGES */
+        .badges-container img { margin: 5px; height: 30px; transition: 0.3s; }
+        .badges-container img:hover { transform: translateY(-5px); }
+
+        /* TIMELINE EXPERIENCES */
+        .experience-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .experience-item::before {
+            content: ''; position: absolute; left: -10px; top: 0;
+            width: 16px; height: 16px; background: var(--secondary);
+            border: 3px solid var(--primary); border-radius: 50%;
+        }
+        .role-title { font-weight: bold; color: #000; font-size: 1.1rem; }
+        .org-name { color: var(--primary); font-style: italic; }
+
+        /* FOOTER & CONTACT */
+        .footer-elaina {
+            width: 100%;
+            display: block;
+            margin-top: -50px; /* Để ảnh đè lên trên một chút */
+            mask-image: linear-gradient(to bottom, transparent, black 20%); /* Hiệu ứng mờ dần phía trên */
+            -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black 30%);
+        }
+        
+        .contact-box {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .social-link img { height: 40px; margin: 0 10px; transition: 0.3s; }
+        .social-link img:hover { transform: scale(1.2); }
+
+        /* Animation Keyframes */
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            .about-container { flex-direction: column; text-align: center; }
+            .grid-container { flex-direction: column !important; text-align: center; }
+            .typing-effect { font-size: 2.5rem; }
+            ul.custom-list li { text-align: left; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Nguyen Thuy Cham</h1>
-        <p>FINANCE STUDENT • FOREIGN TRADE UNIVERSITY</p>
-        <p style="margin-top: 10px; font-size: 1rem;">Future Financial Analyst</p>
-        <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+        <div class="typing-effect">~ 💖 Welcome to my Profile 💖 ~</div>
+        <div class="subtitle">
+            <p>🏫 University: Foreign Trade University (FTU)</p>
+            <p>💼 Major: Finance & Banking</p>
+        </div>
     </header>
 
     <section id="about">
         <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-            <div class="about-img">
-                <img src="https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg" alt="Thuy Cham">
+        <div class="grid-container">
+            <div class="col-img">
+                <img src="https://64.media.tumblr.com/e1f1c97123ae217eb731500e502e0083/tumblr_n9dxcikmIU1qc9zfzo7_r1_250.gif" class="anime-gif" alt="Fox">
             </div>
-            <div class="about-text">
-                <h3>Hello, I'm Thuy Cham 👋</h3>
-                <p>
-                    I am a senior student majoring in <b>Finance & Banking</b> at Foreign Trade University (FTU). 
-                    With a strong passion for numbers and technology, I aspire to become a Financial Analyst capable of applying data-driven decisions.
-                </p>
-                <br>
-                <p><b>Personal Info:</b></p>
-                <ul style="list-style: none; margin-top: 10px;">
-                    <li>📅 Age: 20</li>
-                    <li>📍 Location: Hanoi, Vietnam</li>
-                    <li>✉️ Email: your.email@gmail.com</li>
+            <div class="col-text">
+                <ul class="custom-list">
+                    <li><b>Name:</b> Nguyen Thuy Cham</li>
+                    <li><b>Age:</b> 20</li>
+                    <li><b>Nationality:</b> Vietnam 🇻🇳</li>
+                    <li><b>Loves:</b> Learning Korean, Chinese, Reading</li>
+                    <li><b>Gender:</b> Female (She/Her)</li>
+                    <li><b>Hobbies:</b> Writing, Drawing</li>
+                    <li><b>Goal:</b> Applying technology to solve financial problems.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Knowledge & Skills</h2>
+        <div class="grid-container grid-reverse">
+            <div class="col-img">
+                <img src="https://i.pinimg.com/originals/8d/4b/77/8d4b77c44b7a68c0fd609411e2c0ec3c.gif" class="anime-gif" alt="Coding Girl">
+            </div>
+            <div class="col-text">
+                <h3>💻 Tech Stack</h3>
+                <div class="badges-container">
+                    <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+                    <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+                    <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+                    <img src="https://img.shields.io/badge/adobe%20photoshop%20-%2331A8FF.svg?&style=for-the-badge&logo=adobe%20photoshop&logoColor=white"/>
+                    <img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/>
+                </div>
                 <br>
-                <div>
-                    <span class="skill-tag">Microsoft Excel</span>
-                    <span class="skill-tag">Power BI</span>
-                    <span class="skill-tag">Financial Analysis</span>
-                    <span class="skill-tag">Python (Basic)</span>
-                    <span class="skill-tag">English</span>
+                <h3>📊 Finance Tools</h3>
+                <div class="badges-container">
+                    <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white">
+                    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=PowerBI&logoColor=black">
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background-color: var(--bg-light);">
+    <section id="experience">
         <h2 class="section-title">Experiences</h2>
-        
-        <div class="timeline-item">
-            <p class="timeline-date">2023 - Present</p>
-            <h3>Entrepreneur Z Community (FIIS)</h3>
-            <p><i>Active Member</i></p>
-            <p>Participated in organizing events and connecting startup communities.</p>
-        </div>
-
-        <div class="timeline-item">
-            <p class="timeline-date">2023</p>
-            <h3>Hackathon Run For Business</h3>
-            <p><i>Participant</i></p>
-            <p>Successfully participated and developed business solutions in a competitive environment.</p>
-        </div>
-
-        <div class="timeline-item">
-            <p class="timeline-date">2022 - 2023</p>
-            <h3>Edutalk Education Center</h3>
-            <p><i>Sales Rookie</i></p>
-            <p>Consulting courses and developing sales skills.</p>
-        </div>
-
-        <div class="timeline-item">
-            <p class="timeline-date">Volunteering</p>
-            <h3>Yên Phong 1 Volunteer Club</h3>
-            <p><i>Head of Human Resources</i></p>
-            <p>Managed HR activities and organized charity trips.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p style="text-align: center;">Feel free to connect with me for opportunities or networking.</p>
-        
-        <div class="contact-links">
-            <a href="https://www.facebook.com/thuycham.nguyen.106/" class="contact-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
-            <a href="https://www.linkedin.com/in/nguyen-thuy-cham-8707a82a6/" class="contact-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-            <a href="mailto:emailcuaban@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email Me</a>
+        <div class="grid-container">
+            <div class="col-img">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHo3NnJiaW8xZGl3N2J3cDZ1YTVhOGY3N2VtMGg1M2l1YnlmM2V5MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BsJNWf7J70RJS/giphy.gif" class="anime-gif" alt="Writing">
+            </div>
+            <div class="col-text">
+                <div class="experience-item">
+                    <div class="role-title">Competition Participation</div>
+                    <div class="org-name">Hackathon Run For Business 2023</div>
+                </div>
+                <div class="experience-item">
+                    <div class="role-title">Member & Organizer</div>
+                    <div class="org-name">Entrepreneur Z Community (FIIS)</div>
+                </div>
+                <div class="experience-item">
+                    <div class="role-title">Sales Rookie</div>
+                    <div class="org-name">Edutalk Education Center</div>
+                </div>
+                 <div class="experience-item">
+                    <div class="role-title">Head of HR Committee</div>
+                    <div class="org-name">Yên Phong 1 Volunteer Club</div>
+                </div>
+                 <div class="experience-item">
+                    <div class="role-title">Tutor</div>
+                    <div class="org-name">Math & English</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 20px; background: var(--secondary-color); color: white;">
-        <p>&copy; 2025 Nguyen Thuy Cham. All Rights Reserved.</p>
-    </footer>
+    <section id="contact" style="text-align: center; border: none; box-shadow: none; background: transparent;">
+        <h2 class="section-title">Contact Me ᓚᘏᗢ</h2>
+        <div class="contact-box">
+            <a href="https://www.facebook.com/thuycham.nguyen.106/" class="social-link"><img src="https://img.shields.io/badge/FACEBOOK-1877F2?style=for-the-badge&logo=facebook&logoColor=white"/></a>
+            <a href="https://instagram.com/elliottophellia" class="social-link"><img src="https://img.shields.io/badge/INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
+            <a href="https://www.linkedin.com/in/nguyen-thuy-cham-8707a82a6/" class="social-link"><img src="https://img.shields.io/badge/LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <img src="https://i.gifer.com/ZHsJ.gif" width="150px">
+        </div>
+        <h3 style="color: var(--primary);">💖 Thanks for reading! 💖</h3>
+    </section>
+
+    <img src="https://i.ibb.co/5r2WJZy/Elaina-With-Effective-Python-1-2.webp" class="footer-elaina" alt="Elaina Footer">
 
 </body>
 </html>
