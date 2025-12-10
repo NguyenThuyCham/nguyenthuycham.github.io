@@ -16,6 +16,30 @@
         --accent: #ffc8dd;       /* Hồng pastel (điểm nhấn dễ thương) */
         --text: #2b2d42;         /* Giữ màu chữ đậm cho dễ đọc */
         --white: #ffffff;
+        .welcome-gif {
+    height: 180px; /* Chiều cao cố định vừa phải, không quá to */
+    width: auto;   /* Tự động chỉnh chiều ngang theo tỉ lệ */
+    border-radius: 50%; /* Bo tròn ảnh thành hình tròn (rất dễ thương) */
+    margin-bottom: 25px; /* Tạo khoảng cách với dòng chữ bên dưới */
+    border: 5px solid #fff; /* Viền trắng sạch sẽ */
+    /* Tạo bóng đổ màu xanh pastel nhẹ nhàng */
+    box-shadow: 0 10px 30px rgba(142, 202, 230, 0.4); 
+    
+    /* Hiệu ứng xuất hiện: Bay từ dưới lên và hiện dần */
+    animation: floatUpEntrance 1.2s ease-out forwards;
+    opacity: 0; /* Ẩn đi lúc đầu để chờ animation */
+}
+
+/* Định nghĩa chuyển động bay lên */
+@keyframes floatUpEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8); /* Bắt đầu ở dưới thấp và hơi nhỏ */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Kết thúc ở vị trí chuẩn và kích thước chuẩn */
+    }
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -47,12 +71,57 @@
             padding: 20px;
         }
 
-        .typing-effect {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 0px #fff;
-            animation: fadeInDown 1.5s ease;
-        }
+      /* Code MỚI cho hiệu ứng chữ */
+.typing-effect {
+    font-family: 'Dancing Script', cursive; /* Font chữ điệu đà */
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    
+    /* Tạo màu chữ Gradient (Chuyển từ Hồng sang Xanh) */
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #8ecae6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Thiết lập hiệu ứng gõ chữ */
+    overflow: hidden; /* Ẩn phần chữ chưa hiện ra */
+    border-right: 4px solid #8ecae6; /* Con trỏ nhấp nháy màu xanh */
+    white-space: nowrap; /* Giữ chữ trên 1 dòng */
+    width: 0; /* Bắt đầu với độ rộng bằng 0 */
+    margin: 0 auto; /* Căn giữa */
+    
+    /* Chạy Animation */
+    animation: 
+        typing 3.5s steps(40, end) forwards, /* Chữ chạy ra trong 3.5 giây */
+        blink-caret 0.75s step-end infinite; /* Con trỏ nhấp nháy */
+}
+
+/* Responsive: Trên điện thoại chữ nhỏ lại để không bị tràn */
+@media (max-width: 768px) {
+    .typing-effect {
+        font-size: 1.8rem; /* Giảm cỡ chữ trên điện thoại */
+        white-space: normal; /* Cho phép xuống dòng nếu cần */
+        border-right: none; /* Bỏ con trỏ nhấp nháy trên đt cho đỡ lỗi */
+        width: 100%;
+        animation: fadeIn 2s ease; /* Đổi sang hiệu ứng hiện dần đơn giản trên đt */
+    /* Hiệu ứng mở rộng chiều rộng (giống như đang gõ) */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% } /* Mở rộng ra 100% nội dung */
+}
+
+/* Hiệu ứng con trỏ nhấp nháy */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #8ecae6 } /* Màu của con trỏ */
+}
+
+/* Hiệu ứng hiện dần (dùng cho điện thoại) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+
+
 
         .subtitle {
             font-size: 1.5rem;
@@ -181,11 +250,12 @@
 <body>
 
     <header>
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWp3YjBrdXc3ZThnM2Y2dzk2cjd0b3lzcGtobW14OXc1NjlnZG0xdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vcY5zhQ9QDhCw/giphy.gif" class="welcome-gif" alt="Cute Welcome">
         <div class="typing-effect">~ 💖 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓶𝔂 𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸 💖 ~</div>
         <div class="subtitle">
             <p>🏫 𝓤𝓷𝓲𝓿𝓮𝓻𝓼𝓲𝓽𝔂: ℱℴ𝓇ℯ𝒾ℊ𝓃 𝒯𝓇𝒶𝒹ℯ 𝒰𝓃𝒾𝓋ℯ𝓇𝓈𝒾𝓉𝓎 (ℱ𝒯𝒰)
 </p>
-            <p>💼 𝓜𝓪𝓳𝓸𝓻: 𝓕𝓲𝓷𝓪𝓷𝓬𝓮 & 𝓑𝓪𝓷𝓴𝓲𝓷𝓰</p>
+            <p>💼 𝓜𝓪𝓳𝓸𝓻: ℱ𝒾𝓃𝒶𝓃𝒸ℯ & ℬ𝒶𝓃𝓀𝒾𝓃ℊ</p>
         </div>
     </header>
 
@@ -193,7 +263,7 @@
         <h2 class="section-title">About Me</h2>
         <div class="grid-container">
             <div class="col-img">
-                <img src="https://64.media.tumblr.com/e1f1c97123ae217eb731500e502e0083/tumblr_n9dxcikmIU1qc9zfzo7_r1_250.gif" class="anime-gif" alt="Fox">
+                <img src="https://64.media.tumblr.com/e1f1c97123ae217eb731500e502e0083/tumblr_n9dxcikmIU1qc9zfzo7_r1_250.gif" class="anime-gif" alt="Fox" style="max-width: 300px;">
             </div>
             <div class="col-text">
                 <ul class="custom-list">
