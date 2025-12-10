@@ -9,57 +9,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-    :root {
-        /* Bảng màu Xanh Pastel (Pastel Blue) */
-        --primary: #8ecae6;      /* Xanh pastel chính (nhấn mạnh) */
-        --secondary: #219ebc;    /* Xanh biển vừa (dùng cho chữ, viền) */
-        --accent: #ffc8dd;       /* Hồng pastel (điểm nhấn dễ thương) */
-        --text: #2b2d42;         /* Giữ màu chữ đậm cho dễ đọc */
-        --white: #ffffff;
-        .welcome-gif {
-    height: 180px; /* Chiều cao cố định vừa phải, không quá to */
-    width: auto;   /* Tự động chỉnh chiều ngang theo tỉ lệ */
-    border-radius: 50%; /* Bo tròn ảnh thành hình tròn (rất dễ thương) */
-    margin-bottom: 25px; /* Tạo khoảng cách với dòng chữ bên dưới */
-    border: 5px solid #fff; /* Viền trắng sạch sẽ */
-    /* Tạo bóng đổ màu xanh pastel nhẹ nhàng */
-    box-shadow: 0 10px 30px rgba(142, 202, 230, 0.4); 
-    
-    /* Hiệu ứng xuất hiện: Bay từ dưới lên và hiện dần */
-    animation: floatUpEntrance 1.2s ease-out forwards;
-    opacity: 0; /* Ẩn đi lúc đầu để chờ animation */
-}
+        /* 1. KHAI BÁO BIẾN MÀU SẮC (Đã sửa lỗi ngoặc) */
+        :root {
+            /* Bảng màu Xanh Pastel (Pastel Blue) */
+            --primary: #8ecae6;      /* Xanh pastel chính */
+            --secondary: #219ebc;    /* Xanh biển vừa */
+            --accent: #ffc8dd;       /* Hồng pastel */
+            --text: #2b2d42;         /* Màu chữ */
+            --white: #ffffff;
+        }
 
-/* Định nghĩa chuyển động bay lên */
-@keyframes floatUpEntrance {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.8); /* Bắt đầu ở dưới thấp và hơi nhỏ */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1); /* Kết thúc ở vị trí chuẩn và kích thước chuẩn */
-    }
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Nunito', sans-serif; 
+            color: var(--text); 
+            background-color: #fcfcfc; /* Nền trắng sáng */
+            line-height: 1.6;
+        }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body { 
-        font-family: 'Nunito', sans-serif; 
-        color: var(--text); 
-        background-color: #fcfcfc; /* Nền trắng sáng */
-        background-image: none; /* Bỏ họa tiết mờ cũ */
-        line-height: 1.6;
-    }
-
-
-        /* Typography - Chữ điệu đà giống phong cách cũ của bạn */
+        /* 2. CÁC STYLE CƠ BẢN */
         h1, h2, h3 { 
             font-family: 'Dancing Script', cursive; 
             color: var(--primary);
         }
 
-        /* HEADER / HERO SECTION */
+        /* HEADER */
         header {
             min-height: 80vh;
             background: linear-gradient(180deg, var(--secondary) 0%, rgba(255,255,255,0) 100%);
@@ -71,57 +46,35 @@
             padding: 20px;
         }
 
-      /* Code MỚI cho hiệu ứng chữ */
-.typing-effect {
-    font-family: 'Dancing Script', cursive; /* Font chữ điệu đà */
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    
-    /* Tạo màu chữ Gradient (Chuyển từ Hồng sang Xanh) */
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #8ecae6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    /* Thiết lập hiệu ứng gõ chữ */
-    overflow: hidden; /* Ẩn phần chữ chưa hiện ra */
-    border-right: 4px solid #8ecae6; /* Con trỏ nhấp nháy màu xanh */
-    white-space: nowrap; /* Giữ chữ trên 1 dòng */
-    width: 0; /* Bắt đầu với độ rộng bằng 0 */
-    margin: 0 auto; /* Căn giữa */
-    
-    /* Chạy Animation */
-    animation: 
-        typing 3.5s steps(40, end) forwards, /* Chữ chạy ra trong 3.5 giây */
-        blink-caret 0.75s step-end infinite; /* Con trỏ nhấp nháy */
-}
+        /* 3. STYLE CHO ẢNH WELCOME (Đã đưa ra khỏi :root) */
+        .welcome-gif {
+            height: 180px; 
+            width: auto;   
+            border-radius: 50%; 
+            margin-bottom: 25px; 
+            border: 5px solid #fff; 
+            box-shadow: 0 10px 30px rgba(142, 202, 230, 0.4); 
+            animation: floatUpEntrance 1.2s ease-out forwards;
+            opacity: 0; 
+        }
 
-/* Responsive: Trên điện thoại chữ nhỏ lại để không bị tràn */
-@media (max-width: 768px) {
-    .typing-effect {
-        font-size: 1.8rem; /* Giảm cỡ chữ trên điện thoại */
-        white-space: normal; /* Cho phép xuống dòng nếu cần */
-        border-right: none; /* Bỏ con trỏ nhấp nháy trên đt cho đỡ lỗi */
-        width: 100%;
-        animation: fadeIn 2s ease; /* Đổi sang hiệu ứng hiện dần đơn giản trên đt */
-    /* Hiệu ứng mở rộng chiều rộng (giống như đang gõ) */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% } /* Mở rộng ra 100% nội dung */
-}
-
-/* Hiệu ứng con trỏ nhấp nháy */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #8ecae6 } /* Màu của con trỏ */
-}
-
-/* Hiệu ứng hiện dần (dùng cho điện thoại) */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-    }
-
-
+        /* 4. STYLE HIỆU ỨNG GÕ CHỮ */
+        .typing-effect {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #8ecae6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            overflow: hidden; 
+            border-right: 4px solid #8ecae6; 
+            white-space: nowrap; 
+            width: 0; 
+            margin: 0 auto; 
+            animation: 
+                typing 3.5s steps(40, end) forwards, 
+                blink-caret 0.75s step-end infinite; 
+        }
 
         .subtitle {
             font-size: 1.5rem;
@@ -133,7 +86,7 @@
             box-shadow: 0 5px 15px rgba(0,119,182,0.2);
         }
 
-        /* CHUNG CHO CÁC SECTION */
+        /* 5. STYLE CHO CÁC SECTION (Đã chỉnh kích thước rộng hơn) */
         section {
             max-width: 1250px;
             margin: 60px auto;
@@ -142,7 +95,7 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border-bottom: 5px solid var(--primary);
-            overflow: hidden; /* Để bo tròn ảnh */
+            overflow: hidden; 
         }
 
         .section-title {
@@ -152,7 +105,6 @@
             position: relative;
         }
         
-        /* Trang trí cánh hoa anh đào hoặc dấu ngã bên cạnh tiêu đề */
         .section-title::before, .section-title::after {
             content: '✿';
             color: var(--accent);
@@ -161,30 +113,24 @@
             vertical-align: middle;
         }
 
-        /* GRID LAYOUT (Chia cột) */
+        /* GRID LAYOUT */
         .grid-container {
             display: flex;
             align-items: center;
             gap: 40px;
         }
         
-        /* Đảo ngược thứ tự ảnh/chữ ở các section khác nhau cho đỡ nhàm chán */
-        .grid-reverse {
-            flex-direction: row-reverse;
-        }
-
-        .col-img { flex: 1; text-align: center; }
+        .grid-reverse { flex-direction: row-reverse; }
+        .col-img { flex: 1.3; text-align: center; } /* Ảnh to hơn */
         .col-text { flex: 1; }
 
+        /* STYLE ẢNH GIF CHUNG (To và Nổi bật) */
         .anime-gif {
-           width: 100%; /* Chiếm tối đa chiều rộng cho phép */
-    /* Nếu muốn giới hạn độ to tối đa, bỏ comment dòng dưới và chỉnh số px */
-    /* max-width: 550px; */ 
-    border-radius: 20px; /* Bo góc mềm mại hơn */
-    border: 6px dashed var(--primary); /* Viền nét đứt dày hơn */
-    /* Tạo hiệu ứng bóng đổ nổi 3D màu xanh pastel */
-    box-shadow: 0 20px 40px rgba(142, 202, 230, 0.5); 
-    transition: all 0.4s ease; /* Chuyển động mượt mà */
+            width: 100%; 
+            border-radius: 20px; 
+            border: 6px dashed var(--primary); 
+            box-shadow: 0 20px 40px rgba(142, 202, 230, 0.5); 
+            transition: all 0.4s ease; 
         }
         .anime-gif:hover { transform: scale(1.05) rotate(2deg); }
 
@@ -197,7 +143,7 @@
             position: relative;
         }
         ul.custom-list li::before {
-            content: '🦊'; /* Icon con cáo đầu dòng */
+            content: '🦊'; 
             position: absolute; left: 0; top: 2px;
         }
 
@@ -224,8 +170,8 @@
         .footer-elaina {
             width: 100%;
             display: block;
-            margin-top: -50px; /* Để ảnh đè lên trên một chút */
-            mask-image: linear-gradient(to bottom, transparent, black 20%); /* Hiệu ứng mờ dần phía trên */
+            margin-top: -50px; 
+            mask-image: linear-gradient(to bottom, transparent, black 20%); 
             -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black 30%);
         }
         
@@ -236,13 +182,37 @@
         .social-link img { height: 40px; margin: 0 10px; transition: 0.3s; }
         .social-link img:hover { transform: scale(1.2); }
 
-        /* Animation Keyframes */
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        /* 6. ANIMATIONS KEYFRAMES (Đã đưa ra vị trí đúng) */
+        @keyframes floatUpEntrance {
+            from { opacity: 0; transform: translateY(50px) scale(0.8); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
 
-        /* Mobile Responsive */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #8ecae6 } 
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 7. RESPONSIVE MOBILE */
         @media (max-width: 768px) {
             .grid-container { flex-direction: column !important; text-align: center; }
-            .typing-effect { font-size: 2.5rem; }
+            .typing-effect { 
+                font-size: 1.8rem; 
+                white-space: normal; 
+                border-right: none; 
+                width: 100%;
+                animation: fadeIn 2s ease; 
+            }
             ul.custom-list li { text-align: left; }
         }
     </style>
@@ -250,11 +220,12 @@
 <body>
 
     <header>
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWp3YjBrdXc3ZThnM2Y2dzk2cjd0b3lzcGtobW14OXc1NjlnZG0xdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vcY5zhQ9QDhCw/giphy.gif" class="welcome-gif" alt="Cute Welcome">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWp3YjBrdXc3ZThnM2Y2dzk2cjd0b3lzcGtobW14OXc1NjlnZG0xdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vcY5zhQ9QDhCw/giphy.gif" class="welcome-gif" alt="Cute Welcome">
+        
         <div class="typing-effect">~ 💖 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓶𝔂 𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸 💖 ~</div>
+        
         <div class="subtitle">
-            <p>🏫 𝓤𝓷𝓲𝓿𝓮𝓻𝓼𝓲𝓽𝔂: ℱℴ𝓇ℯ𝒾ℊ𝓃 𝒯𝓇𝒶𝒹ℯ 𝒰𝓃𝒾𝓋ℯ𝓇𝓈𝒾𝓉𝓎 (ℱ𝒯𝒰)
-</p>
+            <p>🏫 𝓤𝓷𝓲𝓿𝓮𝓻𝓼𝓲𝓽𝔂: ℱℴ𝓇ℯ𝒾ℊ𝓃 𝒯𝓇𝒶𝒹ℯ 𝒰𝓃𝒾𝓋ℯ𝓇𝓈𝒾𝓉𝓎 (ℱ𝒯𝒰)</p>
             <p>💼 𝓜𝓪𝓳𝓸𝓻: ℱ𝒾𝓃𝒶𝓃𝒸ℯ & ℬ𝒶𝓃𝓀𝒾𝓃ℊ</p>
         </div>
     </header>
@@ -273,83 +244,4 @@
                     <li><b>Loves:</b> Learning Korean, Chinese, Reading</li>
                     <li><b>Gender:</b> Female (She/Her)</li>
                     <li><b>Hobbies:</b> Writing, Drawing</li>
-                    <li><b>Goal:</b> Applying technology to solve financial problems.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Knowledge & Skills</h2>
-        <div class="grid-container grid-reverse">
-            <div class="col-img">
-                <img src="https://i.pinimg.com/originals/8d/4b/77/8d4b77c44b7a68c0fd609411e2c0ec3c.gif" class="anime-gif" alt="Coding Girl">
-            </div>
-            <div class="col-text">
-                <h3>💻 Tech Stack</h3>
-                <div class="badges-container">
-                    <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
-                    <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
-                    <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
-                    <img src="https://img.shields.io/badge/adobe%20photoshop%20-%2331A8FF.svg?&style=for-the-badge&logo=adobe%20photoshop&logoColor=white"/>
-                    <img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/>
-                </div>
-                <br>
-                <h3>📊 Finance Tools</h3>
-                <div class="badges-container">
-                    <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white">
-                    <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=PowerBI&logoColor=black">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2 class="section-title">Experiences</h2>
-        <div class="grid-container">
-            <div class="col-img">
-                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHo3NnJiaW8xZGl3N2J3cDZ1YTVhOGY3N2VtMGg1M2l1YnlmM2V5MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BsJNWf7J70RJS/giphy.gif" class="anime-gif" alt="Writing">
-            </div>
-            <div class="col-text">
-                <div class="experience-item">
-                    <div class="role-title">Competition Participation</div>
-                    <div class="org-name">Hackathon Run For Business 2023</div>
-                </div>
-                <div class="experience-item">
-                    <div class="role-title">Member & Organizer</div>
-                    <div class="org-name">Entrepreneur Z Community (FIIS)</div>
-                </div>
-                <div class="experience-item">
-                    <div class="role-title">Sales Rookie</div>
-                    <div class="org-name">Edutalk Education Center</div>
-                </div>
-                 <div class="experience-item">
-                    <div class="role-title">Head of HR Committee</div>
-                    <div class="org-name">Yên Phong 1 Volunteer Club</div>
-                </div>
-                 <div class="experience-item">
-                    <div class="role-title">Tutor</div>
-                    <div class="org-name">Math & English</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" style="text-align: center; border: none; box-shadow: none; background: transparent;">
-        <h2 class="section-title">Contact Me ᓚᘏᗢ</h2>
-        <div class="contact-box">
-            <a href="https://www.facebook.com/thuycham.nguyen.106/" class="social-link"><img src="https://img.shields.io/badge/FACEBOOK-1877F2?style=for-the-badge&logo=facebook&logoColor=white"/></a>
-            <a href="https://instagram.com/elliottophellia" class="social-link"><img src="https://img.shields.io/badge/INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
-            <a href="https://www.linkedin.com/in/nguyen-thuy-cham-8707a82a6/" class="social-link"><img src="https://img.shields.io/badge/LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-        </div>
-        
-        <div style="margin-bottom: 100px;">
-            <img src="https://i.gifer.com/ZHsJ.gif" width="600px">
-        </div>
-        <h3 style="color: var(--primary);">💖 𝓣𝓱𝓪𝓷𝓴𝓼 𝓯𝓸𝓻 𝓻𝓮𝓪𝓭𝓲𝓷𝓰! 💖</h3>
-    </section>
-
-    <img src="https://i.ibb.co/5r2WJZy/Elaina-With-Effective-Python-1-2.webp" class="footer-elaina" alt="Elaina Footer">
-
-</body>
-</html>
+                    <li><b>Goal:</b> Applying technology to
