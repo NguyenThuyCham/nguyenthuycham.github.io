@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thuy Cham | Anime & Finance Portfolio</title>
+    <title>Thuy Cham | Portfolio</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root {
-            /* Bảng màu Blue Ocean pha chút Anime nhẹ nhàng */
-            --primary: #0077b6;      /* Xanh biển đậm */
-            --secondary: #caf0f8;    /* Xanh băng tuyết */
-            --accent: #ffb7b2;       /* Hồng phấn nhẹ (tạo điểm nhấn cute) */
-            --text: #2b2d42;
-            --white: #ffffff;
-        }
+    :root {
+        /* Bảng màu Xanh Pastel (Pastel Blue) */
+        --primary: #8ecae6;      /* Xanh pastel chính (nhấn mạnh) */
+        --secondary: #219ebc;    /* Xanh biển vừa (dùng cho chữ, viền) */
+        --accent: #ffc8dd;       /* Hồng pastel (điểm nhấn dễ thương) */
+        --text: #2b2d42;         /* Giữ màu chữ đậm cho dễ đọc */
+        --white: #ffffff;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Nunito', sans-serif; 
-            color: var(--text); 
-            background-color: #f0f8ff; /* Nền xanh nhạt như bầu trời */
-            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Họa tiết mờ */
-            line-height: 1.6;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+        font-family: 'Nunito', sans-serif; 
+        color: var(--text); 
+        background-color: #fcfcfc; /* Nền trắng sáng */
+        background-image: none; /* Bỏ họa tiết mờ cũ */
+        line-height: 1.6;
+    }
+
 
         /* Typography - Chữ điệu đà giống phong cách cũ của bạn */
         h1, h2, h3 { 
@@ -65,7 +66,7 @@
 
         /* CHUNG CHO CÁC SECTION */
         section {
-            max-width: 1000px;
+            max-width: 1250px;
             margin: 60px auto;
             padding: 20px;
             background: var(--white);
@@ -103,14 +104,18 @@
             flex-direction: row-reverse;
         }
 
-        .col-img { flex: 1; text-align: center; }
-        .col-text { flex: 1.5; }
+        .col-img { flex: 1.3; text-align: center; }
+        .col-text { flex: 1; }
 
         .anime-gif {
-            max-width: 100%;
-            border-radius: 15px;
-            border: 4px dashed var(--primary); /* Viền nét đứt dễ thương */
-            transition: transform 0.3s;
+           width: 100%; /* Chiếm tối đa chiều rộng cho phép */
+    /* Nếu muốn giới hạn độ to tối đa, bỏ comment dòng dưới và chỉnh số px */
+    /* max-width: 550px; */ 
+    border-radius: 20px; /* Bo góc mềm mại hơn */
+    border: 6px dashed var(--primary); /* Viền nét đứt dày hơn */
+    /* Tạo hiệu ứng bóng đổ nổi 3D màu xanh pastel */
+    box-shadow: 0 20px 40px rgba(142, 202, 230, 0.5); 
+    transition: all 0.4s ease; /* Chuyển động mượt mà */
         }
         .anime-gif:hover { transform: scale(1.05) rotate(2deg); }
 
@@ -176,10 +181,11 @@
 <body>
 
     <header>
-        <div class="typing-effect">~ 💖 Welcome to my Profile 💖 ~</div>
+        <div class="typing-effect">~ 💖 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓶𝔂 𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸 💖 ~</div>
         <div class="subtitle">
-            <p>🏫 University: Foreign Trade University (FTU)</p>
-            <p>💼 Major: Finance & Banking</p>
+            <p>🏫 𝓤𝓷𝓲𝓿𝓮𝓻𝓼𝓲𝓽𝔂: ℱℴ𝓇ℯ𝒾ℊ𝓃 𝒯𝓇𝒶𝒹ℯ 𝒰𝓃𝒾𝓋ℯ𝓇𝓈𝒾𝓉𝓎 (ℱ𝒯𝒰)
+</p>
+            <p>💼 𝓜𝓪𝓳𝓸𝓻: 𝓕𝓲𝓷𝓪𝓷𝓬𝓮 & 𝓑𝓪𝓷𝓴𝓲𝓷𝓰</p>
         </div>
     </header>
 
@@ -267,10 +273,10 @@
             <a href="https://www.linkedin.com/in/nguyen-thuy-cham-8707a82a6/" class="social-link"><img src="https://img.shields.io/badge/LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
         </div>
         
-        <div style="margin-bottom: 20px;">
+        <div style="margin-bottom: 30px;">
             <img src="https://i.gifer.com/ZHsJ.gif" width="150px">
         </div>
-        <h3 style="color: var(--primary);">💖 Thanks for reading! 💖</h3>
+        <h3 style="color: var(--primary);">💖 𝓣𝓱𝓪𝓷𝓴𝓼 𝓯𝓸𝓻 𝓻𝓮𝓪𝓭𝓲𝓷𝓰! 💖</h3>
     </section>
 
     <img src="https://i.ibb.co/5r2WJZy/Elaina-With-Effective-Python-1-2.webp" class="footer-elaina" alt="Elaina Footer">
